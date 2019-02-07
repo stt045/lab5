@@ -3,6 +3,15 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+		$(".friends a").click(function(e) {
+		e.preventDefault();
+		var name = $(this).text();
+		console.log("Clicked! " + name); // DELETE
+		var anagramName = anagrammedName($(this).text())
+		console.log(anagramName); // DELETE
+		$(this).text(anagramName);
+	})
 })
 
 /*
@@ -44,3 +53,16 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
